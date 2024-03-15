@@ -1,13 +1,124 @@
-body {
+:root{
+  --color-blue:#e6eeff;
+  --color-grey:#404040;
+  --color-orange:#ff9900;
+  --color-white:#ffffff;
+  --color-red:#ff0000;
+  --color-light: #f8f8f8;
+}
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-blue);
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*header*/
+.header{
+  margin: 50px 0;
+  padding: 10px;
+}
+.header-title{
+  font-size: 48px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: var(--color-grey);
+  text-shadow: 4px 4px 6px rgba(66, 68, 90, 1);
+}
+/*main*/
+.main-text{
+  font-size: 28px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  padding: 10px;
+  color: var(--color-grey);
+  margin: 0 0 50px 0;
+}
+/*watch*/
+.watch{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 8px solid var(--color-orange);
+  background-color: var(--color-white);
+}
+.watch-content {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-light);
+  border-radius: 50%;
+  position: relative;
+}
+.hour,
+.minute,
+.second{
+  position: absolute;
+  transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1);
+}
+.hour{
+  width: 5px;
+  height: 60px;
+  top: 38%;
+  left: 49%;
+  transform-origin: 50% 100%;
+  background-color: var(--color-grey);
+}
+.minute{
+  width: 4px;
+  height: 90px;
+  top: 32%;
+  left: 50%;
+  transform-origin: 50% 100%;
+  background-color: var(--color-grey);
+}
+.second{
+  width: 2px;
+  height: 100px;
+  top: 30%;
+  left: 50%;
+  transform-origin: 50% 100%;
+  background-color: var(--color-red);
+}
+.center {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-grey);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.number{
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-grey);
+  transform: translate(-50%, -50%);
+}
+/*footer*/
+.footer{
+  margin: 50px 0;
+  padding: 10px;
+}
+.footer-text{
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: var(--color-grey);
 }
